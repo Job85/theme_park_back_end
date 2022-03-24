@@ -4,6 +4,7 @@ const Restaurant = new Schema(
     {
         name: { type: String, required: true },
         cuisine: { type: String, required: true },
+        key: { type: String, require: true },
         restaurant_id: [{ type: Schema.Types.ObjectId, ref: 'restaurant_id' }]
     },
     { timestamps: true }
