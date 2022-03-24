@@ -9,12 +9,10 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
     const restaurants = [
         {
-            _id: 75,
             name: 'Grandma\'s Fried Goodies',
             cuisine: 'Fried Desserts'
         },
         {
-            _id: 75,
             name: 'All American Grill',
             cuisine: 'Grill & BBQ'
         },
