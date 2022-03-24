@@ -1,12 +1,11 @@
 const { Schema } = require('mongoose')
 
-const MenuItems = new Schema(
+const MenuItem = new Schema(
     {
         menu_item: { type: String, required: true },
         price: { type: Number, required: true },
-        description: [{ type: Schema.Types.ObjectId, ref: 'tasks' }]
     },
     { timestamps: true }
 )
 
-module.exports = MenuItems
+module.exports = MenuItem
