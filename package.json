@@ -1,6 +1,29 @@
 {
   "dependencies": {
+    "body-parser": "^1.19.2",
     "cors": "^2.8.5",
-    "mongoose": "^6.2.8"
-  }
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0"
+  },
+  "name": "theme_park_back_end",
+  "description": "Tired of waiting in the long lines just for food? Then this app is for you. Order your food ahead of time to pick up at vendor window and get back to the reason why you're here, THE RIDES.",
+  "version": "1.0.0",
+  "main": "query.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Job85/theme_park_back_end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Job85/theme_park_back_end/issues"
+  },
+  "homepage": "https://github.com/Job85/theme_park_back_end#readme"
 }

@@ -6,7 +6,7 @@ const { Restaurant, MenuItems } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-const main = async () => {
+const createRestaurant = async () => {
     const restaurants = [
         {
             name: 'Grandma\'s Fried Goodies',
@@ -17,11 +17,12 @@ const main = async () => {
             cuisine: 'Grill & BBQ'
         },
     ]
+    await Restaurant.insertMany(restaurants)
+    console.log('Created restaurants')
 }
 
 const run = async () => {
-    const tasks = await createRestaurant()
-    await createRestaurantWithTasks(rest)
+    await createRestaurant()
     db.close()
 }
 

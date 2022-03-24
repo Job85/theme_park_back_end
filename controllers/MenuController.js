@@ -1,9 +1,9 @@
-const getMenuItems = (req, res) => {
+const getMenu = (req, res) => {
     res.send({
         message: 'Grabbing Menu'
     })
 }
 
 module.exports = {
-    getMenuItems
+    getMenu
 }
