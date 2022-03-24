@@ -1,15 +1,10 @@
-// const db = require('./db')
-const { Restaurant } = require('../models')
-const getMenu = (req, res) => {
-    let gotMenu = Restaurant.find({
-        name: 'Grandma\'s Fried Goodies',
-        cuisine: 'Fried Desserts',
-        key: ''
-    })
+const db = require('../db')
+const { MenuItem } = require('../models')
+const getMenu = async (req, res) => {
+    let gotMenu = await MenuItem.find({})
     console.log('gotMenu')
-    return gotMenu
+    res.send(gotMenu)
 }
-
 
 
 module.exports = {

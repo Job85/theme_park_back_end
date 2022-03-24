@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-const MenuItemSchema = require('./menu_item')
+const MenuItemSchema = require('./menuItem')
 const RestaurantSchema = require('./restaurant')
 
-const MenuItem = mongoose.model('MenuItem', MenuItemSchema)
-const Restaurant = mongoose.model('Restaurant', RestaurantSchema)
+const MenuItem = mongoose.model('menuItems', MenuItemSchema)
+const Restaurant = mongoose.model('restaurants', RestaurantSchema)
 
 module.exports = {
     MenuItem,

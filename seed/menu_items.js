@@ -1,8 +1,6 @@
 const db = require('../db')
-// const Chance = require('chance')
-const { Restaurant, MenuItem } = require('../models')
+const { MenuItem } = require('../models')
 
-// const chance = new Chance()
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
