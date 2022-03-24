@@ -1,14 +1,12 @@
 const db = require('../db')
-// const Chance = require('chance')
-const { Restaurant, MenuItems } = require('../models')
 
-// const chance = new Chance()
+const { Restaurant, MenuItem } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const createRestaurant = async () => {
-    const desserts = await MenuItems.find({ key: 'r1' })
-    const dinner = await MenuItems.find({ key: 'r2' })
+    const desserts = await MenuItem.find({ key: 'r1' })
+    const dinner = await MenuItem.find({ key: 'r2' })
     const restaurants = [
         {
             name: 'Grandma\'s Fried Goodies',

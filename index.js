@@ -14,6 +14,8 @@ app.use(logger('dev'))
 
 const menuController = require('./controllers/MenuController')
 app.get('/menu', menuController.getMenu)
+app.get('/rest', menuController.getRest)
+
 
 
 app.listen(PORT, () => console.log(`Server running on ${PORT}`))
