@@ -12,12 +12,12 @@ const createRestaurant = async () => {
         {
             name: 'Grandma\'s Fried Goodies',
             cuisine: 'Fried Desserts',
-            key: desserts
+            menuItem_id: desserts
         },
         {
             name: 'All American Grill',
             cuisine: 'Grill & BBQ',
-            key: dinner
+            menuItem_id: dinner
         },
     ]
     await Restaurant.insertMany(restaurants)

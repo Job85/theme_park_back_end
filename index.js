@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use(logger('dev'))
 
 const menuController = require('./controllers/MenuController')
+const dinnerController = require('./controllers/DinnerController')
+const dessertsController = require('./controllers/DessertsController')
+app.get('/dinner', dinnerController.getDinner)
+app.get('/desserts', dessertsController.getDesserts)
 app.get('/menu', menuController.getMenu)
 app.get('/rest', menuController.getRest)
 
