@@ -7,7 +7,7 @@ const getMenu = async (req, res) => {
 }
 
 const getRest = async (req, res) => {
-    let gotRest = await Restaurant.find({})
+    let gotRest = await Restaurant.find({}).populate()
     console.log('gotRest')
     res.send(gotRest)
 }
