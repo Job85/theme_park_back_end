@@ -1,8 +1,14 @@
 const db = require('../db')
-const { MenuItem } = require('../models')
+const { MenuItem, Restaurant } = require('../models')
 
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+
+// const findRestaurant = async () => {
+//     const menu_items = await Restaurant.find({ key: '623cf533822a4ae104f19656' },
+//         { _id: '623cf533822a4ae104f19655' })
+//     console.log(menu_items)
+// }
 
 const createRestaurant = async () => {
     const menu_items = [
@@ -113,8 +119,13 @@ const createRestaurant = async () => {
     console.log('Created menu items with')
 }
 
+const deleteRestraunt = async () => {
+    let deleted = await Restaurant.deleteOne({ _id: "623cf09d470c40197a920588" })
+    console.log(deleted)
+}
+
 const run = async () => {
-    await createRestaurant()
+    await findRestaurant()
     db.close()
 }
 

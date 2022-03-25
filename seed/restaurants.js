@@ -7,6 +7,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const createRestaurant = async () => {
     const desserts = await MenuItem.find({ key: 'r1' })
     const dinner = await MenuItem.find({ key: 'r2' })
+    console.log(desserts)
     const restaurants = [
         {
             name: 'Grandma\'s Fried Goodies',
